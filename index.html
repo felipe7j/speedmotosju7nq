@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Speed Motos Junqueirópolis | Oficina de Motos – Mecânica, Revisão e Peças</title>
+<meta name="description" content="Oficina de motos em Junqueirópolis SP. Troca de óleo, revisão geral, mecânica completa, peças e capacetes. Agende agora! (18) 99604-4850"/>
+<meta name="keywords" content="oficina moto Junqueirópolis, troca de óleo moto Junqueirópolis, mecânica moto Junqueirópolis, conserto moto perto de mim, Speed Motos"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Speed Motos Junqueirópolis"/>
+<meta property="og:description" content="Sua moto em boas mãos. Rapidez e confiança em Junqueirópolis — SP."/>
+<meta property="og:type" content="website"/>
+<link rel="canonical" href="https://speedmotosjunq.com.br/"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Speed Motos Junqueirópolis",
+"telephone":"+5518996044850","address":{"@type":"PostalAddress","addressLocality":"Junqueirópolis","addressRegion":"SP","addressCountry":"BR"},
+"openingHours":"Mo-Fr 08:00-18:00 Sa 08:00-12:00","sameAs":["https://www.instagram.com/speedmotosjunq/"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* ─── TOKENS ─────────────────────────────────────── */
+:root{
+  --black:   #0b0b0b;
+  --deep:    #111111;
+  --surface: #181818;
+  --card:    #1e1e1e;
+  --fire:    #D94B0A;     /* vermelho-laranja do logo  */
+  --ember:   #F26522;     /* laranja claro hover       */
+  --ash:     #2a2a2a;
+  --white:   #F0F0F0;
+  --muted:   #777777;
+  --border:  rgba(217,75,10,.18);
+  --glow:    rgba(217,75,10,.22);
+  --wpp:     #25D366;
+  --r:       10px;
+  --t:       .26s cubic-bezier(.4,0,.2,1);
+  --font-h:  'Bebas Neue',sans-serif;
+  --font-b:  'Rajdhani',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--font-b);font-size:17px;line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button,.btn{cursor:pointer;font-family:var(--font-b);border:none}
+
+/* ─── LAYOUT ─────────────────────────────────────── */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sec{padding:88px 0}
+.alt{background:var(--deep)}
+
+/* ─── LABELS / EYEBROW ───────────────────────────── */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-b);font-size:.75rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--fire);
+  margin-bottom:14px;
+}
+.eyebrow::before{content:'';width:22px;height:2px;background:var(--fire);display:block}
+
+/* ─── HEADINGS ───────────────────────────────────── */
+.h1{font-family:var(--font-h);font-size:clamp(3rem,7.5vw,5.6rem);line-height:.95;color:var(--white);letter-spacing:.02em}
+.h1 s{text-decoration:none;color:var(--fire)}
+.h2{font-family:var(--font-h);font-size:clamp(2rem,5vw,3.4rem);line-height:1;color:var(--white);letter-spacing:.02em}
+.h2 s{text-decoration:none;color:var(--fire)}
+.sub{color:var(--muted);font-size:1rem;margin-bottom:44px;font-weight:500}
+
+/* ─── BUTTONS ────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:8px;padding:14px 30px;border-radius:6px;
+  font-family:var(--font-b);font-weight:700;font-size:1.05rem;
+  letter-spacing:.05em;transition:var(--t);white-space:nowrap
+}
+.btn-fire{background:var(--fire);color:#fff}
+.btn-fire:hover{background:var(--ember);transform:translateY(-2px);box-shadow:0 10px 28px rgba(217,75,10,.4)}
+.btn-ghost{background:transparent;border:2px solid var(--fire);color:var(--fire)}
+.btn-ghost:hover{background:var(--glow);transform:translateY(-2px)}
+.btn-wpp{background:var(--wpp);color:#fff}
+.btn-wpp:hover{background:#1eb851;transform:translateY(-2px);box-shadow:0 10px 28px rgba(37,211,102,.32)}
+.btn-sm{padding:10px 18px;font-size:.9rem}
+
+/* ─── NAVBAR ─────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:70px;display:flex;align-items:center;
+  background:rgba(11,11,11,.96);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.05)
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+.nav-logo img{height:48px;filter:drop-shadow(0 0 8px rgba(217,75,10,.6))}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{
+  font-size:.82rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);transition:color var(--t)
+}
+.nav-links a:hover{color:var(--fire)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px;transition:var(--t)}
+.burger.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ─── MOBILE MENU ────────────────────────────────── */
+.mob-nav{
+  position:fixed;top:70px;left:0;right:0;z-index:990;
+  background:var(--card);border-bottom:1px solid var(--border);
+  padding:20px 24px;display:flex;flex-direction:column;gap:14px;
+  transform:translateY(-110%);transition:transform var(--t)
+}
+.mob-nav.on{transform:translateY(0)}
+.mob-nav a{
+  color:var(--muted);font-weight:600;font-size:1rem;
+  padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);
+  transition:color var(--t)
+}
+.mob-nav a:last-child{border-bottom:none}
+.mob-nav a:hover{color:var(--fire)}
+
+/* ─── HERO ───────────────────────────────────────── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding-top:70px;position:relative;overflow:hidden
+}
+/* Diagonal background split */
+.hero-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(108deg, var(--black) 55%, var(--surface) 55%);
+  pointer-events:none
+}
+/* Texture dots */
+.hero-dots{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(217,75,10,.15) 1px,transparent 1px);
+  background-size:32px 32px;
+  mask-image:linear-gradient(108deg,transparent 52%,black 58%,black 100%)
+}
+/* Vertical fire stripe */
+.hero-stripe{
+  position:absolute;top:0;bottom:0;left:54%;width:3px;
+  background:linear-gradient(to bottom,transparent,var(--fire) 30%,var(--fire) 70%,transparent);
+  opacity:.5;pointer-events:none
+}
+.hero .wrap{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center
+}
+.hero-kicker{
+  display:flex;align-items:center;gap:10px;margin-bottom:16px
+}
+.hero-kicker-bar{width:28px;height:2px;background:var(--fire)}
+.hero-kicker span{
+  font-size:.75rem;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--fire)
+}
+.hero-title{margin-bottom:20px}
+.hero-sub{color:var(--muted);font-size:1.05rem;max-width:420px;margin-bottom:32px;font-weight:500}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-stats{display:flex;gap:40px;flex-wrap:wrap}
+.stat-num{font-family:var(--font-h);font-size:2.2rem;color:var(--fire);line-height:1}
+.stat-lbl{font-size:.78rem;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* Lado direito do hero — logo com efeitos */
+.hero-right{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-logo-ring{
+  position:relative;
+  width:380px;height:380px;
+  display:flex;align-items:center;justify-content:center
+}
+/* Anel externo girando */
+.ring-outer{
+  position:absolute;inset:0;border-radius:50%;
+  border:1px solid rgba(217,75,10,.3);
+  animation:spin 24s linear infinite
+}
+.ring-outer::after{
+  content:'';position:absolute;top:-5px;left:50%;transform:translateX(-50%);
+  width:10px;height:10px;border-radius:50%;background:var(--fire);
+  box-shadow:0 0 12px var(--fire),0 0 28px rgba(217,75,10,.6)
+}
+/* Anel meio pontilhado */
+.ring-mid{
+  position:absolute;inset:22px;border-radius:50%;
+  border:1px dashed rgba(217,75,10,.15);
+  animation:spin 16s linear infinite reverse
+}
+/* Anel interno sólido tênue */
+.ring-inner{
+  position:absolute;inset:44px;border-radius:50%;
+  border:1px solid rgba(217,75,10,.08)
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-logo-img{
+  width:72%;height:auto;border-radius:50%;position:relative;z-index:2;
+  animation:float 4s ease-in-out infinite;
+  filter:drop-shadow(0 0 40px rgba(217,75,10,.55)) drop-shadow(0 0 80px rgba(217,75,10,.22))
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* ─── QUICK ACCESS STRIP ─────────────────────────── */
+.strip{padding:0;margin-top:-30px;position:relative;z-index:20}
+.strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.strip-card{
+  background:var(--card);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--r);padding:22px 18px;
+  display:flex;align-items:center;gap:14px;
+  transition:var(--t);cursor:pointer
+}
+.strip-card:hover{border-color:var(--fire);box-shadow:0 0 24px rgba(217,75,10,.15);transform:translateY(-3px)}
+.strip-icon{
+  font-size:1.7rem;flex-shrink:0;
+  width:46px;height:46px;background:rgba(217,75,10,.1);border:1px solid var(--border);
+  border-radius:8px;display:flex;align-items:center;justify-content:center
+}
+.strip-text h3{font-family:var(--font-b);font-weight:700;font-size:.95rem;margin-bottom:1px}
+.strip-text p{font-size:.78rem;color:var(--muted)}
+
+/* ─── SERVICES ───────────────────────────────────── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.svc{
+  background:var(--card);border:1px solid rgba(255,255,255,.05);
+  border-radius:var(--r);padding:30px 26px;
+  position:relative;overflow:hidden;transition:var(--t)
+}
+/* Linha de fogo lateral */
+.svc::before{
+  content:'';position:absolute;top:0;left:0;
+  width:3px;height:100%;background:var(--fire);
+  transform:scaleY(0);transform-origin:bottom;transition:transform var(--t)
+}
+/* Número decorativo grande */
+.svc::after{
+  content:attr(data-n);
+  position:absolute;top:12px;right:16px;
+  font-family:var(--font-h);font-size:4.5rem;color:rgba(217,75,10,.06);
+  line-height:1;pointer-events:none
+}
+.svc:hover{border-color:rgba(217,75,10,.3);transform:translateY(-4px)}
+.svc:hover::before{transform:scaleY(1)}
+.svc-ico{font-size:2rem;margin-bottom:14px}
+.svc h3{font-family:var(--font-b);font-size:1.2rem;font-weight:700;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.svc-tag{font-size:.72rem;color:var(--fire);font-weight:700;letter-spacing:.08em;margin-bottom:16px}
+
+/* ─── STORE ──────────────────────────────────────── */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
+.tab{
+  padding:9px 18px;border-radius:100px;
+  border:1px solid rgba(255,255,255,.08);background:transparent;
+  color:var(--muted);font-family:var(--font-b);font-weight:600;
+  font-size:.85rem;cursor:pointer;transition:var(--t)
+}
+.tab.on,.tab:hover{background:rgba(217,75,10,.12);border-color:var(--fire);color:var(--fire)}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.prod{
+  background:var(--card);border:1px solid rgba(255,255,255,.05);
+  border-radius:var(--r);overflow:hidden;transition:var(--t)
+}
+.prod:hover{border-color:rgba(217,75,10,.28);transform:translateY(-4px)}
+.prod-thumb{
+  width:100%;height:165px;background:var(--surface);
+  display:flex;align-items:center;justify-content:center;
+  font-size:3.4rem;position:relative
+}
+.prod-tag{
+  position:absolute;top:10px;left:10px;
+  background:var(--fire);color:#fff;
+  font-family:var(--font-b);font-size:.68rem;font-weight:700;
+  padding:3px 9px;border-radius:100px;letter-spacing:.04em
+}
+.prod-body{padding:16px}
+.prod-body h4{font-family:var(--font-b);font-weight:700;font-size:.95rem;margin-bottom:3px}
+.prod-body .desc{font-size:.8rem;color:var(--muted);margin-bottom:12px}
+.prod-price{
+  font-family:var(--font-h);font-size:1.45rem;color:var(--fire);
+  margin-bottom:12px;line-height:1
+}
+.prod-price small{font-family:var(--font-b);font-size:.68rem;color:var(--muted);font-weight:500}
+.prod-acts{display:flex;gap:7px}
+.prod-acts .btn{flex:1;padding:9px 8px;font-size:.82rem}
+
+/* ─── SCHEDULE ───────────────────────────────────── */
+.sched-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.sched-info p{color:var(--muted);margin-bottom:20px;font-weight:500}
+.checks{list-style:none;display:flex;flex-direction:column;gap:11px}
+.checks li{
+  display:flex;align-items:center;gap:12px;
+  font-size:.9rem;color:var(--muted);font-weight:500
+}
+.checks li::before{
+  content:'✓';flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  background:rgba(217,75,10,.1);border:1px solid var(--fire);
+  color:var(--fire);font-size:.72rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center
+}
+.form-box{
+  background:var(--card);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--r);padding:32px
+}
+.fg{margin-bottom:17px}
+.fg label{
+  display:block;font-size:.75rem;font-weight:700;
+  color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px
+}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:var(--surface);border:1px solid rgba(255,255,255,.07);
+  border-radius:6px;padding:11px 14px;color:var(--white);
+  font-family:var(--font-b);font-size:.95rem;transition:var(--t);outline:none
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:var(--fire);box-shadow:0 0 0 3px rgba(217,75,10,.18)
+}
+.fg select option{background:var(--card)}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ─── ABOUT ──────────────────────────────────────── */
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-img{
+  position:relative;
+  width:100%;aspect-ratio:4/3;
+  background:var(--card);border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--r);display:flex;align-items:center;justify-content:center;
+  font-size:5rem;overflow:hidden
+}
+.about-img::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(217,75,10,.1) 0%,transparent 55%)
+}
+/* Diagonal stripe decoration */
+.about-img::after{
+  content:'';position:absolute;
+  width:3px;height:120%;top:-10%;left:30%;
+  background:linear-gradient(to bottom,transparent,rgba(217,75,10,.2),transparent);
+  transform:rotate(12deg)
+}
+.about-badge{
+  position:absolute;bottom:-18px;right:-18px;
+  background:var(--fire);color:#fff;
+  border-radius:var(--r);padding:18px 22px;text-align:center;
+  box-shadow:0 8px 32px rgba(217,75,10,.4)
+}
+.about-badge strong{display:block;font-family:var(--font-h);font-size:2.2rem;line-height:1}
+.about-badge span{font-size:.78rem;font-weight:700}
+.about-txt p{color:var(--muted);margin-bottom:14px;line-height:1.75;font-weight:500}
+.diffs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.diff{
+  background:var(--card);border:1px solid rgba(255,255,255,.05);
+  border-radius:8px;padding:16px;transition:var(--t)
+}
+.diff:hover{border-color:var(--border)}
+.diff-ico{font-size:1.3rem;margin-bottom:8px}
+.diff h4{font-family:var(--font-b);font-size:.9rem;font-weight:700;margin-bottom:3px}
+.diff p{font-size:.78rem;color:var(--muted)}
+
+/* ─── INSTAGRAM ──────────────────────────────────── */
+.insta{
+  padding:64px 0;text-align:center;
+  background:var(--surface);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)
+}
+.btn-insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.btn-insta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(220,39,67,.3)}
+
+/* ─── CONTACT ────────────────────────────────────── */
+.ct-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:44px;align-items:start}
+.ct-card{
+  background:var(--card);border:1px solid rgba(255,255,255,.05);
+  border-radius:var(--r);padding:20px;margin-bottom:12px;
+  display:flex;gap:14px;align-items:flex-start;transition:var(--t)
+}
+.ct-card:hover{border-color:rgba(217,75,10,.25)}
+.ct-ico{
+  font-size:1.3rem;flex-shrink:0;width:44px;height:44px;
+  background:rgba(217,75,10,.1);border:1px solid var(--border);
+  border-radius:8px;display:flex;align-items:center;justify-content:center
+}
+.ct-card h4{font-family:var(--font-b);font-weight:700;font-size:.9rem;margin-bottom:3px}
+.ct-card p{color:var(--muted);font-size:.88rem}
+.ct-card a{color:var(--fire);font-weight:700}
+.map{
+  width:100%;height:310px;background:var(--card);
+  border:1px solid rgba(255,255,255,.06);border-radius:var(--r);overflow:hidden
+}
+.map iframe{width:100%;height:100%;border:0}
+.hours{
+  background:var(--card);border:1px solid rgba(255,255,255,.05);
+  border-radius:var(--r);overflow:hidden;margin-top:12px
+}
+.hr{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.04);font-size:.88rem
+}
+.hr:last-child{border-bottom:none}
+.hr .open{color:var(--fire);font-weight:700}
+.hr .closed{color:var(--muted)}
+
+/* ─── FOOTER ─────────────────────────────────────── */
+.foot{background:#070707;padding:48px 0 22px;border-top:1px solid rgba(255,255,255,.04)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:36px}
+.foot-logo img{height:52px;margin-bottom:14px;filter:drop-shadow(0 0 6px rgba(217,75,10,.4))}
+.foot-brand p{color:var(--muted);font-size:.88rem;line-height:1.7;font-weight:500}
+.foot-col h4{
+  font-family:var(--font-b);font-size:.75rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--fire);margin-bottom:14px
+}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-col a{color:var(--muted);font-size:.88rem;font-weight:500;transition:color var(--t)}
+.foot-col a:hover{color:var(--fire)}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.04);padding-top:20px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--muted);font-weight:500
+}
+.foot-bottom b{color:var(--fire)}
+
+/* ─── WHATSAPP FLOAT ─────────────────────────────── */
+.wf{
+  position:fixed;bottom:26px;right:26px;
+  width:58px;height:58px;background:var(--wpp);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;z-index:9000;
+  animation:wpp-pulse 2.4s ease-in-out infinite;transition:var(--t)
+}
+.wf:hover{transform:scale(1.14);box-shadow:0 8px 32px rgba(37,211,102,.55)}
+@keyframes wpp-pulse{
+  0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.45)}
+  50%{box-shadow:0 4px 30px rgba(37,211,102,.9),0 0 0 10px rgba(37,211,102,.1)}
+}
+.wf::before{
+  content:'Fale Conosco';position:absolute;right:68px;
+  background:#fff;color:#000;padding:6px 12px;border-radius:6px;
+  font-family:var(--font-b);font-size:.78rem;font-weight:700;
+  white-space:nowrap;opacity:0;transform:translateX(6px);transition:var(--t);pointer-events:none
+}
+.wf:hover::before{opacity:1;transform:translateX(0)}
+
+/* ─── MODAL ──────────────────────────────────────── */
+.modal-ov{
+  position:fixed;inset:0;background:rgba(0,0,0,.9);backdrop-filter:blur(8px);
+  z-index:5000;display:flex;align-items:center;justify-content:center;
+  padding:20px;opacity:0;pointer-events:none;transition:opacity var(--t)
+}
+.modal-ov.on{opacity:1;pointer-events:all}
+.modal{
+  background:var(--card);border:1px solid rgba(217,75,10,.3);
+  border-radius:var(--r);padding:32px;max-width:460px;width:100%;
+  transform:translateY(20px);transition:transform var(--t)
+}
+.modal-ov.on .modal{transform:translateY(0)}
+.modal-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.modal-top h3{font-family:var(--font-b);font-size:1.3rem;font-weight:700}
+.modal-close{background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;transition:color var(--t)}
+.modal-close:hover{color:var(--white)}
+.modal-ico{font-size:3.8rem;text-align:center;margin-bottom:14px}
+.modal p{color:var(--muted);margin-bottom:18px;font-size:.92rem}
+.modal .prod-price{font-size:1.6rem;margin-bottom:20px}
+
+/* ─── TOAST ──────────────────────────────────────── */
+.toast{
+  position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(14px);
+  background:var(--fire);color:#fff;font-family:var(--font-b);font-weight:700;
+  padding:12px 26px;border-radius:100px;z-index:9999;
+  opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap
+}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ─── RESPONSIVE ─────────────────────────────────── */
+@media(max-width:960px){
+  .nav-links,.nav-links+.btn{display:none}
+  .burger{display:flex}
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero-right{display:none}
+  .hero-ctas{justify-content:center}
+  .hero-stats{justify-content:center}
+  .strip-grid{grid-template-columns:1fr}
+  .sched-wrap{grid-template-columns:1fr}
+  .about-wrap{grid-template-columns:1fr}
+  .about-badge{position:static;margin-top:14px;width:fit-content}
+  .ct-wrap{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .diffs{grid-template-columns:1fr}
+  .fg2{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .sec{padding:60px 0}
+  .hero{min-height:auto;padding:100px 0 56px}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .form-box{padding:22px 16px}
+}
+@media(max-width:420px){.prod-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap">
+    <a href="#home" class="nav-logo">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7QCEUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAGgcAigAYkZCTUQwYTAwMGFiNzAxMDAwMDI4MDMwMDAwZTkwNDAwMDAyZDA2MDAwMGRiMDYwMDAwNzQwOTAwMDAyZTBkMDAwMDg3MGQwMDAwNTcwZTAwMDBiOTBlMDAwMDdjMTMwMDAwAP/bAIQABQYGCwgLCwsLCw0LCwsNDg4NDQ4ODw0ODg4NDxAQEBEREBAQEA8TEhMPEBETFBQTERMWFhYTFhUVFhkWGRYWEgEFBQUKBwoICQkICwgKCAsKCgkJCgoMCQoJCgkMDQsKCwsKCw0MCwsICwsMDAwNDQwMDQoLCg0MDQ0MExQTExOc/8IAEQgAlgCWAwEiAAIRAQMRAf/EAIIAAQACAwEBAQAAAAAAAAAAAAABBwIEBQYDCBAAAQIEAgYGBwUHBQAAAAAAAQIRAAMSIQQxBRMiQVFhEBQwcYGRMkJSobHB0SAjQGDhFTNQYnKCkhZTg+LwEQACAQMDAwQDAAMBAAAAAAABEQAhMUFRYXEQgZGhscHwIDDRQOHxUP/aAAwDAQACAAMAAAABpiQEkSAEgAiQhMEJgXNTNzFMgSAkiUhn9oy1hOMSCJgiMoIuambmKZBJIAmO8d7T3/Ea3R+DPDZ5yexyon5kTCJgi5qauUpkEzEj6ek9meDzsHgHl/b8/wCp6DU8X7M3Kfsmflt1fHZ4311IiYFy01cpTIJ7/A7pdlX2dT5+haf99Spz+9zvQHY7HguIX/5P0dAH6BpqwvIHhYmBctNXKUz0Of6z5bXndrqbfy2/n67yWpOO3wNzdmPM7HT+uXz4uHt9P5bG/wC8qr55/L2Nc7m6jzm13/lGXl7lpq5dnm0z6ryvd+Ozt8bo8vH6d6NTHD6/fa4+0fD66uX0+OfR5O1jl1+Ftc+M/p3/ADPQmNn68zLHPi3LTNzbfMpnLEZTiMogZIGTEZRAlAIEwEXNTNzFMglEhEgEoEoEwAAgXNTNzFMrmFMrmFMzcopqbkFNTcgptcgpuLlFNRcwpqLmFM3MH//aAAgBAQABBQL8ggOVS1J/BYbDaoYqcpP4HASddOxw60KlKginonYRcuFJbs0xjcGrDK0euibg8YrDKRh8Li4OBmmOpYWUcROE8rJJfscHoydiY/02piZ+CQZ2BMftGQI0lPmoODmqXMn4jEYI6JmiXicZoKYZmIwc2R2Gj8P1idpXH9SRh8Ti56sMStGL0OEKmytWccvZ0RopRXpvEJnQdVouRi9NTAnR+kE49OksJ1Wb9rAYnq87SmA66j9lYh9G4IYGXjcT1idLmyRCNKCWcRpfETows3VTNL4U4uSoKEaCwK0HTeIE2f8AYRh1rGqVUcNMjA4nEyYOnMRGMn4mfAw6z0IlKVCUFUFJEYTHz8GJenQuMdpeesJkqUAHhchaelJExMtKhOfVFIGqw15s9gJyygYtIqwqqElQTAT99h5hmKw6zWtSlqnzyhamlTpiF09CdXNHWAqbOLrTQuWiiXMXLlsaJicRNEw4dQCZMx1JngTBqpUSJjTFqaYrVTIOISpdUuSOgYhUaz7yZc65SUS5xKlYhbKnqAnKqMtVKUbJTMpUnEKVEpVK3dZxRczKVa4qHQ/Q8P0P0O/5Ny7L/9oACAEDAAE/Ae2CSbsWG/d2SdIFMnUgFJf0gcwdx6KSztbju7KdijMRKQzasNY2PMjj22EkpmFVW4bKQQkqL5Oq31iXgkMVLrSAtSSbCgJDurnyGe6OpJ+5Td5tF6k+tc7OY8Y6tLBmPU0sJdlJUXUpswGsN3GEYUa4y1nZTUSRmwTU/lCtGgUgLdRWx9kJIKge+kPCcNLUZZBXRMNAyqqBHgzF/dGolbanWEJIRuqqL+FIAfjHUgBMd1KQVBktYDJRBuUnll0YabQ7gKBbZKau7hlE+epaSCXeYVZcm8o61eXspqTRtU32f7vlAxQFWwkAhlJpN7v7WfjAnnWqWSCTVusxS2XdErEqRTfJdV7+q3k1mheKcyikJSEKcAJYPZyb3iTiqdY4SpKlVUqS+1xF4GMO0TSVuohVN01Z7/J3b+Af/9oACAECAAE/Ae2fsjIddefI7u7ofskSqSo+17v07aaspZvE5t5QqcXYMbA978OUa47Z9l9x3c41itnLafcRkIMzZqAuWseJLQMRnazeL5fGDMUArJ035N9YrVYWch+TfWNd6OQBbP4PxHRNSSzW5u0S0sRZtkCNWdrgarPx8IMtVr3exfK3dFOwA3D4wtAL23Nw3/WEy2C3ckji9oXLJpZ3AzdrRq8s6bOHz/gH/9oACAEBAAY/AvyFcEfggpTBUwOlO+nj4wzbJ3/gZaNxN+4XMdZR6ppWPZb0T3NFzHPoRZ60BY8Yvbs/j3Qxuk+grcoR/atu8oPzipNwbKSclCHQicg70pDp88vhAT1YLlpDCtY1v+Q+GUAzkzpfJW0j/JDwVSjUhIpFiwtG0b9k6QyfaNhH70P/AEn6xRPljESOPD/3Pzhwicg/ykfMmG1FaeK2q8wA3vhNEwiRMTUgJ2WHC0JSqbMFZaoKNicoontPlK47x38e+CiW6pUz3bw/dlCjKAoNxdvCPvEFPPd55dghByOfcLwlEsCo5cEgRszVcyVAJHyimaqXMV61Nw3OFUz5aeCVKYiM0n+lQUPdEiV/ty9rvXdvJoTNWKUpuAc1Hd4QjDo2llYflu+cZP8AFaokrl0gLBqBD7STCkLSKm2k5giFJGWae4/bRM3DPuNjCVyyCoZcFAw2pV8vPKFLmKDn0uCQIVMaxNu4WEXklX/J/wBYdGHlg+0p1nzMNXSOCbfrEtZ9VQPhCTK2inaH8wIikvbdzMGcsFLhkg5l98Gn1BT9fsuBaKWvwj0Y+6ungbiKdUirx+sPMekbskiHCbdFg8MBeGOcNTVL9k7u47ofUL8x8YYI1STmcz5w4B6LpLdKU10KT74Fef6QpSlZ5JhLqpDnxjN2e5j94VEm/CJVPCAr2w8TDwaApOc0jyhavZvBSq4UISjcCYKHsVQyckNaKtxHk8EpXWk59IJCnA3DhAO4BucK74SFVW4AwGdqeBhXpPusYQ9VuAgNkLCJgO8Qh8kQt8lRUKn3Zw55wVDJ3iu/kYuNkimDS5KukBNgIccIJ4wmkw5zaCDvhNJ3Q/GF84SR4wo74Y5Hoc8YtlFW9oNX5h//2gAIAQEBAT8h/Qo+l/8AATjlpeWl4/23jgpLiGkNe8df0iDoSomAqTgCWLDkiCkuOIaQh5vHWW/WSoXY4x1BphsIaK1XBv4lpcQ0hDzeOst+jmDacwBbN+gsIxbVHwIr0JQdD3jKIeT/AGFIgggLghES4rFMEKqMDUHg09YQkJLIIUdYKTHQ/jzBBIZIDHyQ5fUZTauuo+IkIyPgIiwweAh/uI1O+PjsQIeeEfFFFJq+m1QRU89QOiGHcGL0AUAKLEQFWV0HJ42lRgpMdD+Oylb4Lk9hPbah5/iLftABa4FQxslLCCQFxYCAO0DgphyT4oC/wvErwSCS5Bag6xaTBZXhNEOhFOY3FHpesMgGjbRBlaEoQ3zHGWcgijqUOhttCdANMvA/VLTHQ/gG7p8Ql5SiSwSKcE1bYC0bqavJICuwA8SnwU1haN80UDwZtNDUDPlSiHe+pD8zURBwN5hA+Y6yAaLgDWt8Q6cGoKg6gHrlpmGwGUGhoyfPAtMDw6QAQ2DmBjg1D0Ydb3GKVg2pwHeLsQRMdD+AyAqLiewXEXib8kngu3gwFuruh7nug1QYJPQA8mtd6DeoSyNFXkQhUEl2D0b1hc+2SO8jcAkmLjVc/wBQL2R2wawkTCQeE3SI8QoBiSJcEEIdL1Qg/RZhgEkLgUprG4YG4sSCT4ErtMe3Q9Kgeqg95kHrQJkmu39gVkW1U3gmnZQMhE7D+P7gA5Qi7AX7swGDCQYmbf8AYZLUuoWeOY4hlRQpQOJm2q0KtoabQGhCNEvkoY2mAWjTEdg94SHhr/NYVAASTYQCwNX/ACHoFxDUFhoMvkQl6iHfxeu80J0l08QrUTEpkIJUJACEZAUMuwf7h7JJ1g2vFEEnuhA4r/SExLn7vusG0GqcqF0Ja+DtK0poskNuF4WLpVQHMQpoOrhCEL73D595zFoyr/V46gBQIFhB7AYhwXrHYcQRFUcgQfENDC9SsnZRwvjbHwoGQGkSyh6e8IeojlPIa2gyFBqRieJAnXSID4EHS+K3h+AmnatNrw6KSJh8gBBCdqVbg4gHgheC3zGmrKeRaoH0MNSTvSba5lThiAII+B1wShjzEW9dzHKVYlwDFi+Y31C6Q0mx9U2g1RR6YgxgEQrzD9s8w80+UATDuHeHaJBBAOjlRVF0HSAiJVRzrCHVAinPVksTie6Ah0JWvDXoCkbHEtE44urf6VG5aXlonHF0Uv8AocUctLy28Tji63/Hnq+jlpeW6OLpaX/Q4peEQA5aJxxdb9P/2gAMAwEBAgEDAQAAEIEJHDTZZNABJOIdTdTUKHEFKW7T7QIPKIEMLHAVAPLPBAFBDOALW+ZJF3QzwL7kfkgxjEiPAVcTXeKEKBCCMDDGABKAMMAMYQEEIP/aAAgBAwEBPxD9wQga4AKcnH6lFIisKxhW+DjpkGFF2j1/VRam+hPXL/cBCLYhkCUhTKuiEOeBwrQAEFm0yBa6+2AGgtIGhJEyyM1QYbxGbrHASWgOo4ABdwFJSpg4HLwNZ5Uf5MFoRU5Q2xeBKXleegDWi+WPnL5lNm/QBqyyQkGq6HU8qDVOaSpDVhhU1l7g7qBozdShocNKN6StisGuETIDZCFqCFl6QVTYmCtLBrWv7kt9O9OQDVIZtNi5hFSoFdXMbcmFgkKU2PwH/mf/2gAIAQIBAT8Q/cln+xANH+QOAG5YKOKv5EXLQv8AQ5oC+4UnIF9EMPKABy1IONgsOLJhDdK7Icmwanq7ooNy/TMAcH0N4LvCdTMEE2ny+6fZp9j0BBNIR/0k+5Lx/P8AwP/aAAgBAQEBPxD8AYJcQlQsb3gYwBaGCjAUNBCHpWOsXp+eYIKS44hKULL3gY80gFRYMswFDRg5hFFg5dbaJdoOh/C5gNfeCgMuOLQlId4QCve8DnmlpcLBg2ApQAocwKKgeybG0ATsVBboeplzCrXvKAV9EuK4tKAC14VgywS5WKa0I8y4QX2juUw7wkACObRgUD2Ta2gFVQVBUcTEPUy5+3gN33goCr/EbFe0oEaQ2rJMziF5QV3Qo7iuxaXguINeMTUKVoSACubQBBgMtoDPKkAqLBUFRxDaGKOEWUoT9vBc1byw1P4hLF20rhib4z6+J9zCpocsGEbvSv8AJCUJy90AMdxa0IEK6r2APtso3h3IoDPKkuFuX4Q2/ARZdpQn7eB1q3ly4wXDVeIPgkhqRYU8HYSwR+vtwEpVuaEX+NPBgmbMA/EA+lACbC0kMfwYAjV2zRoBSDgvEb7cuN6BAXJQ8RGIL7RvhDYT3RU6EWXaBE/bykpzHejT3uYPowck0ZI55hZ0oEanhIXud2eFPIW0FPpXqshrmZjagVr0V0LEV/D+1TP6Usur8XIrJO8LeOorIwNHBNmfgPx4yqBMjWXqxaE4numIYRZZtG5AtB9sU8k2GHh6LxZG6E7mjQ4Fikrqyio31QuMR2Le+trSyIfvr68DsEQZ9cj90pBQ5jL4LmB4VZ7kaECqeAIDqsorsQWLTzuBIQEOXsrK9lx6IYjNQaCNlnFVqOfEXG6ja0J06MQwitMyo64BriDcIDacRST+xAZWvsIjUkQZ33HXyjkSCpdppLUVQdzAcgdb4hFrqRWUGGEcfCCWchAIMfTo1P8AeMOweYVulIPuYCsNS4h7CQVYA6C+61+NrKN441qgnSB0djiuOGDjEu5U1ZgULAYbvSKpA1TypDuJwdojud4PmZPx1W8DWdAK3lwqig/XvBbi/da8OQY9ReCRhSG3jxO66hbgxgMLBTMkdH8MPOui5oXYHt0W9XZC5RkIMmIeXLzUoCggBQQV+IN49ozj9FYAUNuJas9kCFemwQU0hNMlkQDOJVRkf6QijMMHegH0QPtKTTvgJn0CHzihU8M/7lMELhej/kq1TVFYLVCm/sSXbEpCEFhQXgs4eCBnoQULfRoghdKDfnrK/wAKUCYa+AVvBtqRCg9SqFCFWAGuRih2zXvVcL2tLfIGZ/5hBK/BWDlCkcLDyoowgXKr61CGjRLB8FSNcBJRQOarF4RJoIGXikS5cNEasRW8ypDmdCjZWFHgKGmyX6xe6WD1meo/mELoHTDFi+jpG5oo2qCSk751iA1ibok9j7e8+JC9CEISRQpgIFFC/wBJtoF+4YgPKz6tHPDL3eYRAJKfFTNvKC8pOG+Y75raLiE5ZHxBW+1+EWfgNfowhdKZtkBrAKr5SwnaAvKMQBWWgE2x5tCyoFYz2IsQ4S0uX9jyD7xiYo7VgEGgr86wFcx6CEK94Si3UjSNmsBUvtGqXlWRBoCsAuoZZgKHBAw7HmJpKLx6CFOinPXiOtYCrSh2jCk5SvSuVANhnYFHsjgnDocIXRbfrxHWBS0CPMoi3lV/acgZ2CPYYnkdRxRdPXqY9Y1AHGtDS44LBJOMB9CxwmEKXS0//9k=" alt="Speed Motos Junqueirópolis"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#loja">Loja</a></li>
+      <li><a href="#agendamento">Agendar</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li style="margin-left:8px"><a href="https://wa.me/5518996044850?text=Olá!%20Vim%20pelo%20site." target="_blank" class="btn btn-fire btn-sm">💬 WhatsApp</a></li>
+    </ul>
+    <div class="burger" id="burger" onclick="togBurger()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <a href="#servicos"    onclick="closeBurger()">🔧 Serviços</a>
+  <a href="#loja"        onclick="closeBurger()">🛒 Loja</a>
+  <a href="#agendamento" onclick="closeBurger()">📅 Agendar</a>
+  <a href="#sobre"       onclick="closeBurger()">🏍️ Sobre</a>
+  <a href="#contato"     onclick="closeBurger()">📍 Contato</a>
+  <a href="https://wa.me/5518996044850" target="_blank" class="btn btn-wpp" style="margin-top:6px;text-align:center">💬 Falar no WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-stripe"></div>
+  <div class="wrap">
+    <div>
+      <div class="hero-kicker">
+        <div class="hero-kicker-bar"></div>
+        <span>Junqueirópolis — SP</span>
+      </div>
+      <h1 class="h1 hero-title">
+        Sua moto<br/>em <s>boas</s><br/><s>mãos</s>
+      </h1>
+      <p class="hero-sub">Rapidez e confiança em Junqueirópolis. Atendimento especializado para todas as marcas e modelos.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/5518996044850?text=Olá!%20Gostaria%20de%20agendar%20um%20serviço." target="_blank" class="btn btn-wpp">💬 Falar no WhatsApp</a>
+        <a href="#agendamento" class="btn btn-ghost">📅 Agendar Serviço</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">+1000</div><div class="stat-lbl">Motos Atendidas</div></div>
+        <div><div class="stat-num">24h</div><div class="stat-lbl">Resposta Rápida</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-lbl">Comprometimento</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-ring">
+        <div class="ring-outer"></div>
+        <div class="ring-mid"></div>
+        <div class="ring-inner"></div>
+        <img class="hero-logo-img" src="data:image/jpeg;base64,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" alt="Speed Motos"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="strip-grid">
+      <a href="#servicos" class="strip-card"><div class="strip-icon">🔧</div><div class="strip-text"><h3>Serviços Completos</h3><p>Mecânica, revisão, troca de óleo e mais</p></div></a>
+      <a href="#loja" class="strip-card"><div class="strip-icon">🛒</div><div class="strip-text"><h3>Loja de Peças</h3><p>Capacetes, peças e acessórios</p></div></a>
+      <a href="#agendamento" class="strip-card"><div class="strip-icon">📅</div><div class="strip-text"><h3>Agendamento Online</h3><p>Rápido, fácil, sem espera</p></div></a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="sec alt" id="servicos">
+  <div class="wrap">
+    <div class="eyebrow">Nossos Serviços</div>
+    <h2 class="h2" style="margin-bottom:8px">O que fazemos pela <s>sua moto</s></h2>
+    <p class="sub">Serviços realizados com qualidade, rapidez e garantia de satisfação.</p>
+    <div class="svc-grid">
+      <div class="svc" data-n="01"><div class="svc-ico">🛢️</div><h3>Troca de Óleo</h3><p>Troca de óleo do motor e filtros com produtos de alta qualidade. Mantém seu motor protegido.</p><div class="svc-tag">⚡ RÁPIDO · ENTREGA NO DIA</div><a href="https://wa.me/5518996044850?text=Olá!%20Gostaria%20de%20troca%20de%20óleo." target="_blank" class="btn btn-fire btn-sm">Agendar</a></div>
+      <div class="svc" data-n="02"><div class="svc-ico">🔍</div><h3>Revisão Geral</h3><p>Checagem completa de freios, corrente, pneus, iluminação e suspensão. Prevenção é o melhor remédio.</p><div class="svc-tag">⚡ DIAGNÓSTICO DETALHADO</div><a href="https://wa.me/5518996044850?text=Olá!%20Gostaria%20de%20revisão%20geral." target="_blank" class="btn btn-fire btn-sm">Agendar</a></div>
+      <div class="svc" data-n="03"><div class="svc-ico">⚙️</div><h3>Mecânica Completa</h3><p>Motor, câmbio, freios hidráulicos, injeção eletrônica e carburador. Todas as marcas e modelos.</p><div class="svc-tag">⚡ TODAS AS MARCAS</div><a href="https://wa.me/5518996044850?text=Olá!%20Preciso%20de%20mecânica%20completa." target="_blank" class="btn btn-fire btn-sm">Orçamento</a></div>
+      <div class="svc" data-n="04"><div class="svc-ico">⚡</div><h3>Parte Elétrica</h3><p>Diagnóstico e reparo de sistema elétrico, faróis, alarmes, ignição e bateria. Rápido e preciso.</p><div class="svc-tag">⚡ DIAGNÓSTICO GRÁTIS</div><a href="https://wa.me/5518996044850?text=Olá!%20Parte%20elétrica%20da%20minha%20moto." target="_blank" class="btn btn-fire btn-sm">Agendar</a></div>
+      <div class="svc" data-n="05"><div class="svc-ico">🔄</div><h3>Troca de Pneus</h3><p>Balanceamento, troca e verificação de pressão. Vários modelos em estoque para maior segurança.</p><div class="svc-tag">⚡ ESTOQUE IMEDIATO</div><a href="https://wa.me/5518996044850?text=Olá!%20Gostaria%20de%20trocar%20pneu." target="_blank" class="btn btn-fire btn-sm">Agendar</a></div>
+      <div class="svc" data-n="06"><div class="svc-ico">🛡️</div><h3>Freios e Suspensão</h3><p>Pastilhas, fluido de freio, molas e amortecedores. Segurança em primeiro lugar para você.</p><div class="svc-tag">⚡ GARANTIA NO SERVIÇO</div><a href="https://wa.me/5518996044850?text=Olá!%20Freios%20e%20suspensão%20da%20minha%20moto." target="_blank" class="btn btn-fire btn-sm">Agendar</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOJA -->
+<section class="sec" id="loja">
+  <div class="wrap">
+    <div class="eyebrow">Loja Online</div>
+    <h2 class="h2" style="margin-bottom:8px">Produtos para <s>sua moto</s></h2>
+    <p class="sub">Capacetes, peças e acessórios com qualidade. Compra segura via WhatsApp.</p>
+    <div class="tabs">
+      <button class="tab on" onclick="filterP('todos',this)">Todos</button>
+      <button class="tab" onclick="filterP('capacetes',this)">🪖 Capacetes</button>
+      <button class="tab" onclick="filterP('pecas',this)">⚙️ Peças</button>
+      <button class="tab" onclick="filterP('acessorios',this)">🛍️ Acessórios</button>
+    </div>
+    <div class="prod-grid" id="pgrid"></div>
+  </div>
+</section>
+
+<!-- AGENDAMENTO -->
+<section class="sec alt" id="agendamento">
+  <div class="wrap">
+    <div class="sched-wrap">
+      <div>
+        <div class="eyebrow">Agendamento</div>
+        <h2 class="h2" style="margin-bottom:8px">Agende seu <s>serviço</s></h2>
+        <p class="sched-info">Sem filas, sem espera. Preencha o formulário e confirmamos o horário pelo WhatsApp. Simples assim.</p>
+        <ul class="checks">
+          <li>Confirmação rápida por WhatsApp</li>
+          <li>Sem surpresas no orçamento</li>
+          <li>Horários flexíveis — Seg a Sáb</li>
+          <li>Serviço entregue no prazo combinado</li>
+          <li>Garantia em todos os serviços</li>
+        </ul>
+        <br/>
+        <p style="color:var(--muted);font-size:.85rem">
+          Prefere ligar?<br/>
+          <a href="tel:+5518996044850" style="color:var(--fire);font-weight:700">(18) 99604-4850</a>
+          &nbsp;|&nbsp;
+          <a href="tel:+551838411532" style="color:var(--fire);font-weight:700">(18) 3841-1532</a>
+        </p>
+      </div>
+      <div class="form-box">
+        <h3 style="font-family:var(--font-b);font-size:1.1rem;font-weight:700;margin-bottom:22px">📋 Seus dados</h3>
+        <div class="fg"><label>Nome completo *</label><input id="f-nome" type="text" placeholder="Ex: João da Silva"/></div>
+        <div class="fg2">
+          <div class="fg"><label>WhatsApp *</label><input id="f-tel" type="tel" placeholder="(18) 99999-9999"/></div>
+          <div class="fg"><label>Moto (modelo)</label><input id="f-moto" type="text" placeholder="Honda CG 160"/></div>
+        </div>
+        <div class="fg">
+          <label>Tipo de serviço *</label>
+          <select id="f-svc">
+            <option value="">Selecione o serviço</option>
+            <option>🛢️ Troca de Óleo</option>
+            <option>🔍 Revisão Geral</option>
+            <option>⚙️ Mecânica Completa</option>
+            <option>⚡ Parte Elétrica</option>
+            <option>🔄 Troca de Pneus</option>
+            <option>🛡️ Freios e Suspensão</option>
+            <option>🔧 Outro</option>
+          </select>
+        </div>
+        <div class="fg2">
+          <div class="fg"><label>Data preferida</label><input id="f-data" type="date"/></div>
+          <div class="fg">
+            <label>Horário</label>
+            <select id="f-hor">
+              <option value="">Qualquer horário</option>
+              <option>Manhã (08h–12h)</option>
+              <option>Tarde (13h–18h)</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Observações</label><textarea id="f-obs" rows="3" placeholder="Descreva o problema ou detalhes..."></textarea></div>
+        <button class="btn btn-wpp" style="width:100%;font-size:1rem;padding:15px" onclick="enviar()">💬 Enviar via WhatsApp</button>
+        <p style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:10px">Dados usados apenas para agendamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sec" id="sobre">
+  <div class="wrap">
+    <div class="about-wrap">
+      <div style="position:relative">
+        <div class="about-img">🏍️
+          <!-- Troque o emoji por: <img src="foto-oficina.jpg" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"> -->
+        </div>
+        <div class="about-badge"><strong>+10</strong><span>anos de exp.</span></div>
+      </div>
+      <div class="about-txt">
+        <div class="eyebrow">Nossa História</div>
+        <h2 class="h2" style="margin-bottom:16px">Speed Motos:<br/><s>nascida para servir</s></h2>
+        <p>A Speed Motos nasceu da paixão por motos e do compromisso de oferecer um serviço de verdade para o motociclista de Junqueirópolis e região.</p>
+        <p>Nossa equipe é especializada em motos de todas as marcas e modelos — das mais simples às mais modernas. Trabalhamos com peças de qualidade, ferramentas adequadas e, acima de tudo, <strong style="color:var(--white)">respeito pelo cliente.</strong></p>
+        <div class="diffs">
+          <div class="diff"><div class="diff-ico">⚡</div><h4>Rapidez</h4><p>Serviços no prazo combinado.</p></div>
+          <div class="diff"><div class="diff-ico">🛡️</div><h4>Confiança</h4><p>Orçamento transparente, sempre.</p></div>
+          <div class="diff"><div class="diff-ico">🔧</div><h4>Experiência</h4><p>Mais de 10 anos na região.</p></div>
+          <div class="diff"><div class="diff-ico">✅</div><h4>Garantia</h4><p>Garantimos todos os serviços.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<div class="insta">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center">Instagram</div>
+    <h2 class="h2" style="text-align:center;margin-bottom:10px">Siga <s>@speedmotosjunq</s></h2>
+    <p style="color:var(--muted);text-align:center;margin-bottom:24px">Acompanhe serviços, promoções e novidades direto no Instagram.</p>
+    <div style="text-align:center">
+      <a href="https://www.instagram.com/speedmotosjunq/" target="_blank" class="btn btn-insta">📷 Ver no Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTATO -->
+<section class="sec alt" id="contato">
+  <div class="wrap">
+    <div class="eyebrow">Contato</div>
+    <h2 class="h2" style="margin-bottom:8px">Onde <s>estamos</s></h2>
+    <p class="sub">Fácil de chegar, fácil de falar. Estamos prontos para te atender.</p>
+    <div class="ct-wrap">
+      <div>
+        <div class="ct-card"><div class="ct-ico">📱</div><div><h4>WhatsApp Principal</h4><p><a href="https://wa.me/5518996044850" target="_blank">(18) 99604-4850</a></p></div></div>
+        <div class="ct-card"><div class="ct-ico">☎️</div><div><h4>Telefone Fixo</h4><p><a href="tel:+551838411532">(18) 3841-1532</a></p></div></div>
+        <div class="ct-card"><div class="ct-ico">📍</div><div><h4>Localização</h4><p>Junqueirópolis — SP<br/><span style="font-size:.8rem;color:var(--muted)">Endereço exato via WhatsApp</span></p></div></div>
+        <div class="ct-card"><div class="ct-ico">📸</div><div><h4>Instagram</h4><p><a href="https://www.instagram.com/speedmotosjunq/" target="_blank">@speedmotosjunq</a></p></div></div>
+        <div class="hours">
+          <div class="hr"><span>Segunda a Sexta</span><span class="open">08h00 – 18h00</span></div>
+          <div class="hr"><span>Sábado</span><span class="open">08h00 – 12h00</span></div>
+          <div class="hr"><span>Domingo e Feriados</span><span class="closed">Fechado</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59523!2d-51.4388!3d-21.5163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9490abf6f1c0f111%3A0x8e8f7b9c9c0f1111!2sJunqueirópolis%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1700000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Junqueirópolis SP"></iframe>
+        </div>
+        <p style="text-align:center;margin-top:10px;font-size:.8rem;color:var(--muted)">
+          📍 Junqueirópolis, SP — <a href="https://maps.google.com/?q=Junqueirópolis+SP" target="_blank" style="color:var(--fire)">Abrir no Google Maps</a>
+        </p>
+        <div style="margin-top:14px">
+          <a href="https://wa.me/5518996044850?text=Olá!%20Gostaria%20do%20endereço%20exato%20da%20Speed%20Motos." target="_blank" class="btn btn-wpp" style="width:100%">💬 Pedir localização exata</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo"><img src="data:image/jpeg;base64,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" alt="Speed Motos"/></div>
+        <p>Oficina de motos em Junqueirópolis — SP.<br/>Rapidez, confiança e qualidade para cuidar da sua moto com quem entende.</p>
+        <br/>
+        <a href="https://wa.me/5518996044850" target="_blank" class="btn btn-wpp btn-sm" style="display:inline-flex">💬 Falar Agora</a>
+      </div>
+      <div class="foot-col"><h4>Serviços</h4><ul><li><a href="#servicos">Troca de Óleo</a></li><li><a href="#servicos">Revisão Geral</a></li><li><a href="#servicos">Mecânica Completa</a></li><li><a href="#servicos">Parte Elétrica</a></li><li><a href="#servicos">Freios e Suspensão</a></li></ul></div>
+      <div class="foot-col"><h4>Links</h4><ul><li><a href="#loja">Loja</a></li><li><a href="#agendamento">Agendamento</a></li><li><a href="#sobre">Sobre Nós</a></li><li><a href="#contato">Contato</a></li><li><a href="https://www.instagram.com/speedmotosjunq/" target="_blank">Instagram</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 <b>Speed Motos</b> Junqueirópolis. Todos os direitos reservados.</span>
+      <span>Oficina de Motos — Junqueirópolis, SP</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5518996044850?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20informações." target="_blank" class="wf" aria-label="WhatsApp">💬</a>
+
+<!-- Modal -->
+<div class="modal-ov" id="mOv" onclick="cModal(event)">
+  <div class="modal">
+    <div class="modal-top"><h3 id="mTit"></h3><button class="modal-close" onclick="cModalD()">✕</button></div>
+    <div class="modal-ico" id="mIco"></div>
+    <p id="mDesc"></p>
+    <div class="prod-price" id="mPrice"></div>
+    <a id="mBtn" href="#" target="_blank" class="btn btn-wpp" style="width:100%">💬 Comprar via WhatsApp</a>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── PRODUTOS ─────────────────────────────────────────
+const PRODS=[
+  {id:1,cat:'capacetes',e:'🪖',n:'Capacete Fechado Sport',d:'Viseira anti-risco, concha em ABS e forro lavável. Homologado pelo INMETRO.',p:'R$ 189,90',t:'INMETRO'},
+  {id:2,cat:'capacetes',e:'🪖',n:'Capacete Aberto Classic',d:'Viseira solar interna, acabamento premium e encaixe anatômico. Ótimo custo-benefício.',p:'R$ 149,90',t:'Oferta'},
+  {id:3,cat:'capacetes',e:'🪖',n:'Capacete Infantil',d:'Design divertido, forro macio e fivela de segurança. Ideal para crianças.',p:'R$ 89,90',t:'Infantil'},
+  {id:4,cat:'pecas',e:'⚙️',n:'Filtro de Óleo Honda CG',d:'Filtro original para Honda CG 125/150/160 Fan e Titan. Instalação inclusa.',p:'R$ 29,90',t:'Original'},
+  {id:5,cat:'pecas',e:'🔋',n:'Bateria Moto 5Ah',d:'Bateria selada 12V 5Ah para Honda, Yamaha, Suzuki e outras. 6 meses de garantia.',p:'R$ 129,90',t:'Garantia'},
+  {id:6,cat:'pecas',e:'🔦',n:'Kit Pastilha de Freio',d:'Pastilha dianteira e traseira. Alta durabilidade e ótima frenagem.',p:'R$ 45,90',t:'Kit'},
+  {id:7,cat:'pecas',e:'⛓️',n:'Kit Relação Completo',d:'Corrente, pinhão e coroa para Honda CG 150/160. Aço temperado premium.',p:'R$ 189,90',t:'Completo'},
+  {id:8,cat:'acessorios',e:'🧤',n:'Luva Motociclista Gel',d:'Palmilha em gel, proteção nos dedos e fecho ajustável. Conforto em viagens longas.',p:'R$ 59,90',t:'Conforto'},
+  {id:9,cat:'acessorios',e:'🔆',n:'Pisca LED Universal',d:'Par de piscas LED alta luminosidade. Universal, fácil instalação. 12V.',p:'R$ 39,90',t:'LED'},
+  {id:10,cat:'acessorios',e:'🧴',n:'Kit Limpeza Moto',d:'Shampoo especial, silicone, pano microfibra e escova. Moto sempre impecável.',p:'R$ 49,90',t:'Kit'},
+  {id:11,cat:'acessorios',e:'📦',n:'Baú Traseiro 28L',d:'Baú rígido 28L com chave, base universal e fecho duplo. Ideal para o dia a dia.',p:'R$ 129,90',t:'Popular'},
+];
+function wppUrl(p){return 'https://wa.me/5518996044850?text='+encodeURIComponent('Olá! Vim pelo site e tenho interesse em: *'+p.n+'* ('+p.p+'). Pode me informar mais?')}
+function renderP(cat){
+  const list=cat==='todos'?PRODS:PRODS.filter(x=>x.cat===cat);
+  document.getElementById('pgrid').innerHTML=list.map(p=>`
+    <div class="prod">
+      <div class="prod-thumb">${p.e}<span class="prod-tag">${p.t}</span></div>
+      <div class="prod-body">
+        <h4>${p.n}</h4>
+        <p class="desc">${p.d.substring(0,70)}...</p>
+        <div class="prod-price">${p.p} <small>à vista</small></div>
+        <div class="prod-acts">
+          <button class="btn btn-ghost" onclick="oModal(${p.id})">Detalhes</button>
+          <a href="${wppUrl(p)}" target="_blank" class="btn btn-wpp">💬 Comprar</a>
+        </div>
+      </div>
+    </div>`).join('');
+}
+function filterP(cat,el){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');renderP(cat);
+}
+
+// ── MODAL ─────────────────────────────────────────────
+function oModal(id){
+  const p=PRODS.find(x=>x.id===id);
+  document.getElementById('mTit').textContent=p.n;
+  document.getElementById('mIco').textContent=p.e;
+  document.getElementById('mDesc').textContent=p.d;
+  document.getElementById('mPrice').textContent=p.p;
+  document.getElementById('mBtn').href=wppUrl(p);
+  document.getElementById('mOv').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function cModal(e){if(e.target.id==='mOv')cModalD()}
+function cModalD(){document.getElementById('mOv').classList.remove('on');document.body.style.overflow=''}
+
+// ── AGENDAMENTO ───────────────────────────────────────
+function enviar(){
+  const n=document.getElementById('f-nome').value.trim();
+  const t=document.getElementById('f-tel').value.trim();
+  const m=document.getElementById('f-moto').value.trim();
+  const s=document.getElementById('f-svc').value;
+  const d=document.getElementById('f-data').value;
+  const h=document.getElementById('f-hor').value;
+  const o=document.getElementById('f-obs').value.trim();
+  if(!n||!t||!s){toast('⚠️ Preencha Nome, WhatsApp e Serviço!');return}
+  let df='';if(d){const[y,mo,dy]=d.split('-');df=dy+'/'+mo+'/'+y}
+  const msg=['📅 *AGENDAMENTO — SPEED MOTOS*','','👤 *Nome:* '+n,'📱 *WhatsApp:* '+t,
+    m?'🏍️ *Moto:* '+m:'','🔧 *Serviço:* '+s,df?'📆 *Data:* '+df:'',
+    h?'⏰ *Horário:* '+h:'',o?'📝 *Obs:* '+o:'','','_Enviado pelo site speedmotosjunq_'
+  ].filter(Boolean).join('
+');
+  window.open('https://wa.me/5518996044850?text='+encodeURIComponent(msg),'_blank');
+  toast('✅ Abrindo WhatsApp...');
+}
+
+// ── TOAST ─────────────────────────────────────────────
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('on');
+  setTimeout(()=>t.classList.remove('on'),3000);
+}
+
+// ── MENU MOBILE ───────────────────────────────────────
+function togBurger(){
+  document.getElementById('burger').classList.toggle('on');
+  document.getElementById('mobNav').classList.toggle('on');
+}
+function closeBurger(){
+  document.getElementById('burger').classList.remove('on');
+  document.getElementById('mobNav').classList.remove('on');
+}
+
+// ── INIT ──────────────────────────────────────────────
+document.getElementById('f-data').min=new Date().toISOString().split('T')[0];
+renderP('todos');
+
+// Máscara telefone
+document.getElementById('f-tel').addEventListener('input',function(){
+  let v=this.value.replace(/\D/g,'');
+  this.value=v.length<=10
+    ?v.replace(/^(\d{2})(\d{4})(\d{0,4})/,'($1) $2-$3')
+    :v.replace(/^(\d{2})(\d{5})(\d{0,4})/,'($1) $2-$3');
+});
+
+// Smooth scroll com offset
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const tgt=document.querySelector(a.getAttribute('href'));
+    if(!tgt)return;e.preventDefault();
+    window.scrollTo({top:tgt.offsetTop-72,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
